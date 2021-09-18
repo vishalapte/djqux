@@ -1,1 +1,1 @@
-# djqux
+# DjangoQux

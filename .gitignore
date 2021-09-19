@@ -2,11 +2,11 @@
 db.sqlite3
 favicons.zip
 links.txt
+upload/
 sandbox/
 static/
-upload/
-models_*.pdf
-models_*.png
+qux
+qux/
 dump.rdb
 
 # common
@@ -17,9 +17,9 @@ common/
 env
 
 # production
-production.py
 credentials/
 credentials.py
+production.py
 
 # Data
 data/

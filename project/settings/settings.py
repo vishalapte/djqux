@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'qux.auth',
     'qux.token',
     'qux.seo',
+    'shorturl',
 ]
 
 MIDDLEWARE = [
@@ -148,8 +149,6 @@ STATICFILES_DIRS = [
     ('fonts', os.path.join(BASE_DIR, "common/fonts")),
     ('webfonts', os.path.join(BASE_DIR, "common/webfonts")),
     ('logo', os.path.join(BASE_DIR, "common/logo")),
-    ('images', os.path.join(BASE_DIR, "common/images")),
-    ('favicons', os.path.join(BASE_DIR, "common/favicons")),
 ]
 
 # Default primary key field type
@@ -163,3 +162,4 @@ LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+ROOT_TEMPLATE = "_app.html"

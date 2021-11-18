@@ -18,11 +18,15 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from qux.auth import urls as qux_auth_urls
 from qux.token import urls as qux_token_urls
+from shorturl.urls import appurls as shorturl_urls
+from shorturl.urls import apiurls as shorturl_urls_api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(qux_auth_urls)),
     path('tokens/', include(qux_token_urls)),
+    path('', include(shorturl_urls, namespace='qux_shorturl')),
+    path('api/v1/shorturl/', include(shorturl_urls_api, namespace='qux_shorturl_api')),
 ]
 
 urlpatterns += [

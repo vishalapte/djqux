@@ -15,6 +15,12 @@ from pathlib import Path
 
 import dotenv
 
+try:
+    from .payments import *
+except ModuleNotFoundError:
+    "payments.py not found"
+    pass
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -55,6 +61,7 @@ INSTALLED_APPS = [
     'qux.token',
     'qux.seo',
     'shorturl',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -149,6 +156,8 @@ STATICFILES_DIRS = [
     ('fonts', os.path.join(BASE_DIR, "common/fonts")),
     ('webfonts', os.path.join(BASE_DIR, "common/webfonts")),
     ('logo', os.path.join(BASE_DIR, "common/logo")),
+    # Payments
+    ('js', os.path.join(BASE_DIR, "payments/common/js")),
 ]
 
 # Default primary key field type

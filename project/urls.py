@@ -25,7 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(qux_auth_urls)),
     path('tokens/', include(qux_token_urls)),
-    path('', include(shorturl_urls, namespace='qux_shorturl')),
     path('api/v1/shorturl/', include(shorturl_urls_api, namespace='qux_shorturl_api')),
 ]
 
@@ -33,3 +32,10 @@ urlpatterns += [
     path('', TemplateView.as_view(template_name='qux_default_home.html'), name='home'),
 ]
 
+urlpatterns += [
+    path('billing/', include('payments.urls')),
+]
+
+urlpatterns += [
+    path('', include(shorturl_urls, namespace='qux_shorturl')),
+]

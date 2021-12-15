@@ -1,0 +1,9 @@
+[submodule "qux"]
+	path = qux
+	url = git@github.com:quxdev/qux
+[submodule "shorturl"]
+	path = shorturl
+	url = git@github.com:quxdev/shorturl
+[submodule "payments"]
+	path = payments
+	url = git@github.com:quxdev/payments

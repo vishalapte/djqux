@@ -79,7 +79,9 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,15 +150,28 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [
     ('css', os.path.join(BASE_DIR, "common/css")),
-    ('css', os.path.join(BASE_DIR, "common/css/bootstrap")),
-    ('css', os.path.join(BASE_DIR, "common/css/fa")),
     ('js', os.path.join(BASE_DIR, "common/js")),
-    ('js', os.path.join(BASE_DIR, "common/js/bootstrap")),
-    ('js', os.path.join(BASE_DIR, "common/js/fa")),
     ('fonts', os.path.join(BASE_DIR, "common/fonts")),
-    ('webfonts', os.path.join(BASE_DIR, "common/webfonts")),
     ('logo', os.path.join(BASE_DIR, "common/logo")),
-    # Payments
+
+    # Bootstrap
+    ('css', os.path.join(BASE_DIR, "common/bootstrap/css")),
+    ('js', os.path.join(BASE_DIR, "common/bootstrap/js")),
+
+    # Select 2
+    ('css', os.path.join(BASE_DIR, "common/select2/css")),
+    ('js', os.path.join(BASE_DIR, "common/select2/js")),
+
+    # FontAwesome
+    ('css', os.path.join(BASE_DIR, "common/fa-pro-6/css")),
+    ('js', os.path.join(BASE_DIR, "common/fa-pro-6/js")),
+    ('webfonts', os.path.join(BASE_DIR, "common/fa-pro-6/webfonts")),
+
+    # Qux
+    ('css', os.path.join(BASE_DIR, "qux/common/css")),
+    ('js', os.path.join(BASE_DIR, "qux/common/js")),
+    # Qux Payments
+    ('css', os.path.join(BASE_DIR, "payments/common/css")),
     ('js', os.path.join(BASE_DIR, "payments/common/js")),
 ]
 

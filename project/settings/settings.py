@@ -60,8 +60,8 @@ INSTALLED_APPS = [
     'qux.auth',
     'qux.token',
     'qux.seo',
-    'shorturl',
     'payments',
+    'community.newsfeed',
 ]
 
 MIDDLEWARE = [

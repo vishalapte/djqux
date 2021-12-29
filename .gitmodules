@@ -7,3 +7,6 @@
 [submodule "payments"]
 	path = payments
 	url = git@github.com:quxdev/payments
+[submodule "community"]
+	path = community
+	url = git@github.com:quxdev/community

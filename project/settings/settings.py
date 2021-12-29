@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'qux.seo',
     'shorturl',
     'payments',
-    'newsfeed',
+    'community.newsfeed',
 ]
 
 MIDDLEWARE = [

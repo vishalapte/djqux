@@ -18,8 +18,8 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from qux.auth import urls as qux_auth_urls
 from qux.token import urls as qux_token_urls
-from shorturl.urls import appurls as shorturl_urls
-from shorturl.urls import apiurls as shorturl_urls_api
+# from shorturl.urls import appurls as shorturl_urls
+# from shorturl.urls import apiurls as shorturl_urls_api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,13 +32,13 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('newsfeed/', include('newsfeed.urls')),
+    path('newsfeed/', include('community.newsfeed.urls')),
 ]
 urlpatterns += [
     path('billing/', include('payments.urls')),
 ]
 
-urlpatterns += [
-    path('api/v1/shorturl/', include(shorturl_urls_api, namespace='qux_shorturl_api')),
-    path('', include(shorturl_urls, namespace='qux_shorturl')),
-]
+# urlpatterns += [
+#     path('api/v1/shorturl/', include(shorturl_urls_api, namespace='qux_shorturl_api')),
+#     path('', include(shorturl_urls, namespace='qux_shorturl')),
+# ]

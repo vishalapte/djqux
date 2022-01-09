@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 from qux.auth import urls as qux_auth_urls
 from qux.token import urls as qux_token_urls
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(qux_auth_urls)),

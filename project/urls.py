@@ -7,19 +7,19 @@ from qux.token import urls as qux_token_urls
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(qux_auth_urls)),
-    path('tokens/', include(qux_token_urls)),
+    path("admin/", admin.site.urls),
+    path("", include(qux_auth_urls)),
+    path("tokens/", include(qux_token_urls)),
 ]
 
 urlpatterns += [
-    path('', TemplateView.as_view(template_name='qux_default_home.html'), name='home'),
+    path("", TemplateView.as_view(template_name="qux_default_home.html"), name="home"),
 ]
 
 urlpatterns += [
-    path('newsfeed/', include('community.newsfeed.urls')),
+    path("newsfeed/", include("community.newsfeed.urls")),
 ]
 
 urlpatterns += [
-    path('billing/', include('payments.urls')),
+    path("billing/", include("payments.urls")),
 ]
